@@ -25,12 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        // Schema::dropIfExists('category');
-        Schema::table('category', function(Blueprint $table){
-            $table->dropColumn('category_name');
-            $table->dropColumn('slug');
-            $table->dropColumn('description');
-            $table->dropTimestamps();
-        });
+        Schema::dropIfExists('category');
     }
 };

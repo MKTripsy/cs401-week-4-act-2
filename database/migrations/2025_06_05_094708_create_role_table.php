@@ -24,11 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        // Schema::dropIfExists('role');
-        Schema::table('role', function(Blueprint $table){
-            $table->dropColumn('role_name');
-            $table->dropColumn('description');
-            $table->dropTimestamps();
-        });
+        Schema::dropIfExists('role');
     }
 };
